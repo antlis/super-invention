@@ -6,13 +6,29 @@ def decode(message_file):
     words_arr = map(str.strip, lines)
 
     width = 1  # number of items on the same line in the triangle
-    last = 0 # index of the last item on the current line in the triangle
+    last = 0   # index of the last item on the current line in the triangle
+
+    # https://pythonbasics.org/decorators/
+    words_generator = ((int(key), word) for key, word in map(str.split, words_arr))
+
+    words_sorted = sorted(words_generator)
+
+    # https://pythonbasics.org/enumerate/
+    words_enumerator = enumerate(words_sorted)
+
+    for i in words_enumerator:
+        print(i)
+
+    print(words_enumerator)
+
     return  " ".join(
         word
-        for i, (_, word) in enumerate(
-            sorted((int(a), b) for a, b in map(str.split, words_arr))
-        )
+        for i, (_, word) in words_enumerator
+        # Explanation of := operator
+        # https://stackoverflow.com/questions/10405820/what-is-the-operator
         if i == last and (last := last + (width := width + 1))
     )
 
-print(decode('input-2.txt'))
+
+# decode('input.txt')
+print(decode('input.txt'))
