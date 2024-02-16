@@ -16,17 +16,17 @@ def decode(message_file):
     # https://pythonbasics.org/enumerate/
     words_enumerator = enumerate(words_sorted)
 
-    for i in words_enumerator:
-        print(i)
+    # for i in words_enumerator:
+    #     print(i)
 
-    print(words_enumerator)
+    # print(words_enumerator)
 
     return  " ".join(
         word
         for i, (_, word) in words_enumerator
         # Explanation of := operator
         # https://stackoverflow.com/questions/10405820/what-is-the-operator
-        if i == last and (last := last + (width := width + 1))
+            if i == last and (last := last + (width := width + 1))
     )
 
 
