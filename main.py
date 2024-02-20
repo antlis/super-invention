@@ -17,7 +17,8 @@ def decode(message_file):
     width = 1  # number of items on the same line in the triangle
     last = 0   # index of the last item on the current line in the triangle
 
-    # https://pythonbasics.org/decorators/
+    # https://www.w3schools.com/python/python_iterators.asp
+    # https://wiki.python.org/moin/Iterator
     words_generator = ((int(key), word) for key, word in map(str.split, words_arr))
 
     words_sorted = sorted(words_generator)
