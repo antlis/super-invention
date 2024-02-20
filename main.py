@@ -44,7 +44,7 @@ def decode(message_file):
     # in case you passing index-2.txt
     # 1 i - index 0
     # 2 something - index 1
-    # 4 else - index 3
+    # 4 else - index 3 (because it's sorted)
     # 3 love - index 2
     # 5 dog - index 4
     # 6 computers - index 5
