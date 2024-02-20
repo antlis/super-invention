@@ -30,7 +30,7 @@ def decode(message_file):
     # https://www.w3schools.com/python/ref_string_split.asp
     # !!! you need to turn key from string to integer with int(key)
     # if you wont do that, sorted function below won't work correctly
-    # would consider 10 go before 9 for example
+    # would consider string '10' go before string '9' for example
     words_generator = ((int(key), word) for key, word in map(str.split, words_arr))
 
     # https://www.w3schools.com/python/ref_func_sorted.asp
