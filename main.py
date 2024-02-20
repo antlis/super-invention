@@ -1,3 +1,5 @@
+# https://stackoverflow.com/questions/77843924/how-can-i-extract-the-last-word-from-each-row-of-a-pyramid/77844224#77844224
+
 # arg file format
 # 
 # 1 i
