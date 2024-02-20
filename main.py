@@ -7,6 +7,12 @@
 # 5 dog
 # 6 computers
 
+# 1 (i)
+# 2 3 (love)
+# 4 5 6 (computers)
+
+# Should reuslt in: i love computers
+
 def decode(message_file):
     # reads every line from file provided
     with open(message_file, 'r') as file:
