@@ -25,7 +25,19 @@ def decode(message_file):
 
     # https://pythonbasics.org/enumerate/
     words_enumerator = enumerate(words_sorted)
-    
+
+    # for i, (_, word) in words_enumerator:
+    #     if i == last and (last := last + (width := width + 1)):
+    #         print('i: ', + i)
+    #         print('_: ', + _)
+    #         print('word: ' + word)
+    #         print('width: ' + str(width))
+    #         print('last: ' + str(last))
+    #         print('-------------------')
+
+    # print('last ooutside of loop: ' + str(last))
+    # print('width ooutside of loop: ' + str(width))
+
     return  " ".join(
         word
         for i, (_, word) in words_enumerator
@@ -34,4 +46,14 @@ def decode(message_file):
         if i == last and (last := last + (width := width + 1))
     )
 
+print('\n')
+print('input-2.txt result: ')
+print('-------------------')
+print(decode('input-2.txt'))
+print('-------------------')
+print('\n')
+print('input.txt result: ')
+print('-------------------')
 print(decode('input.txt'))
+print('-------------------')
+print('\n')
