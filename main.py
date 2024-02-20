@@ -39,8 +39,7 @@ def decode(message_file):
     # print('width ooutside of loop: ' + str(width))
 
     return  " ".join(
-        word
-        for i, (_, word) in words_enumerator
+        word for i, (_, word) in words_enumerator
         # Explanation of := operator
         # https://stackoverflow.com/questions/10405820/what-is-the-operator
         if i == last and (last := last + (width := width + 1))
