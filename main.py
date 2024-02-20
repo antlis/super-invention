@@ -1,3 +1,12 @@
+# arg file format
+# 
+# 1 i
+# 2 something
+# 4 else
+# 3 love
+# 5 dog
+# 6 computers
+
 def decode(message_file):
     # reads every line from file provided
     with open(message_file, 'r') as file:
@@ -15,20 +24,13 @@ def decode(message_file):
 
     # https://pythonbasics.org/enumerate/
     words_enumerator = enumerate(words_sorted)
-
-    # for i in words_enumerator:
-    #     print(i)
-
-    # print(words_enumerator)
-
+    
     return  " ".join(
         word
         for i, (_, word) in words_enumerator
         # Explanation of := operator
         # https://stackoverflow.com/questions/10405820/what-is-the-operator
-            if i == last and (last := last + (width := width + 1))
+        if i == last and (last := last + (width := width + 1))
     )
 
-
-# decode('input.txt')
 print(decode('input.txt'))
